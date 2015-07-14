@@ -1,0 +1,61 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Costs of Database Operations\relax }}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Original Cracking (single-threaded)\relax }}{18}{figure.caption.24}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Cost Breakdown of Database Operations\relax }}{19}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cache Misses}}}{19}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Costs breakdown by CPU component}}}{19}{subfigure.3.2}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Predicated Cracking\relax }}{27}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Consistent State}}}{27}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Compare \& Write Phase}}}{27}{subfigure.4.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Advance Cursor Phase}}}{27}{subfigure.4.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Backup Phase}}}{27}{subfigure.4.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Cost breakdown of single-threaded implementations\relax }}{28}{figure.caption.41}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Vectorized Cracking\relax }}{28}{figure.caption.44}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Simple Partition \& Merge (multi-threaded)\relax }}{28}{figure.caption.47}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Refined Partition \& Merge (multi-threaded)\relax }}{29}{figure.caption.49}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Single Threaded Performance\relax }}{30}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Desktop}}}{30}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Workstation}}}{30}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Server}}}{30}{subfigure.9.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {High-End Server}}}{30}{subfigure.9.4}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Multi Threaded Performance\relax }}{32}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Desktop}}}{32}{subfigure.10.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Workstation}}}{32}{subfigure.10.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Server}}}{32}{subfigure.10.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {High-End Server}}}{32}{subfigure.10.4}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces SIMD Processing Performance at 50\% Selectivity\relax }}{33}{figure.caption.73}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tuning actions.\relax }}{41}{figure.caption.83}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Concurrency control in holistic indexing.\relax }}{42}{figure.caption.84}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Refined Partition \& Merge (multi-threaded) \cite {efficient_cracking}.\relax }}{44}{figure.caption.85}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Vectorized Cracking \cite {efficient_cracking}.\relax }}{44}{figure.caption.86}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Improving performance with holistic indexing.\relax }}{44}{figure.caption.87}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Performance}}}{44}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Performance Breakdown}}}{44}{subfigure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Index Partitions}}}{44}{subfigure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Idle CPU Utilization}}}{44}{subfigure.5.4}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Performance improves if we distribute the threads equally between user queries and holistic workers.\relax }}{47}{figure.caption.94}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Adaptive Ind.}\relax }}{48}{figure.caption.95}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Indexing.\relax }}{48}{figure.caption.96}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Various workload patterns.\relax }}{49}{figure.caption.97}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Random}}}{49}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Skewed}}}{49}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Periodic}}}{49}{subfigure.9.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Sequential}}}{49}{subfigure.9.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {SkyServer}}}{49}{subfigure.9.5}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Holistic indexing utilizes resources more effectively than multi-core state-of-the-art adaptive indexing baselines.\relax }}{49}{figure.caption.103}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Holistic indexing is robust.\relax }}{51}{figure.caption.105}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces More performance gains for holistic indexing as more attributes exist in a schema. All strategies have similar performance. \relax }}{51}{figure.caption.106}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Random Attributes - Random Values}}}{51}{subfigure.12.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Random Attributes - Periodic Values}}}{51}{subfigure.12.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Skewed Attributes - Random Values}}}{51}{subfigure.12.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Skewed Attributes - Periodic Values}}}{51}{subfigure.12.4}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces TPC-H results (Scale Factor 10, ``pre-sorted'' times exclude pre-sorting costs; Q1,6,12: 8 sec).\relax }}{53}{figure.caption.112}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {TPC-H Query 1}}}{53}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {TPC-H Query 6}}}{53}{subfigure.13.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TPC-H Query 12}}}{53}{subfigure.13.3}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Performance of holistic indexing improves while the number of index refinements $x$ increases.\relax }}{54}{figure.caption.117}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Updates.\relax }}{56}{figure.caption.121}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Varying number of clients.\relax }}{56}{figure.caption.123}

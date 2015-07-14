@@ -1,0 +1,134 @@
+\section{Introduction}
+\label{sec:intro}
+
+\begin{table*}
+\begin{center}
+
+\begin{tabular}{ccccccc}
+\hline
+\cline{1-7}
+Indexing& Statistical&Exploitation of idle resources & Exploitation of idle resources & Index  		 & Updates, & Workload\\
+        & analysis   & \emph{before} query processing& \emph{during} query processing & materialization  & projection cost &\\
+\hline
+Offline & $\surd$ & $\surd$ & $\times$  & full & high & static \\ 
+Online & $\surd$ & $\times$ & $\surd$  & full & high & dynamic\\
+Adaptive & $\times$ & $\times$ & $\times$  & partial & low & dynamic\\
+Holistic & $\surd$ & $\surd$ & $\surd$  & partial & low & dynamic\\
+\hline
+\label{tab:qualitative}
+\end{tabular}
+\vspace{-0.45cm}
+ \caption{Qualitative difference among offline, online, adaptive and holistic indexing.}
+\vspace{-0.7cm}
+\end{center}
+\end{table*}
+
+The big data era is causing the research community to rethink fundamental issues 
+in the design of database systems  
+towards more usable systems \cite{UsableDatabases} that can access data better and faster 
+%\cite{blinkdb,MAD,shark,exploration,hinge, hazy,earl,GuidedInteraction, RequirementsSciDB, datacuration,energypartitioning},
+\cite{exploration,hinge, hazy,earl},
+ that can better exploit modern hardware and opportunities for massive parallelization
+%\cite{swissbox,elastras,hadoop+,cod,dbseer},
+\cite{hadoop+}
+ that can support efficient processing of OLTP and/or OLAP queries
+% \cite{nodb,shareddb,hstore,hyper,bitweaving}
+ \cite{nodb,hstore,hyper,bitweaving}.
+% or even exploit crowdsourcing for query processing \cite{crowdq,crowddb}.
+
+\textbf{The Physical Design Problem.} 
+Physical design, and in particular proper index selection, is a predominant factor for the performance of database systems and has only become more crucial in the big data era.
+With new dynamic and exploratory environments, physical design becomes especially hard given the instability of workloads and the continuous stream of big data; a single physical design choice is not necessarily correct or useful for long stretches of time, while at the same time workload knowledge is scarce given the exploratory user behavior.
+
+\textbf{State-of-the-Art.} In database applications, where ``the future is known'', physical design is assigned to database administrators
+who may also be assisted by auto-tuning tools 
+\cite{DBLP:conf/vldb/AgrawalCKMNS04,DBLP:conf/vldb/DagevilleDDYZZ04,DBLP:conf/vldb/ZilioRLLSGF04}.
+Still though, a significant amount of human intervention is necessary and everything needs to happen offline.
+Thus, offline indexing can be applied with good results only on applications where there is enough workload 
+knowledge and idle time to prepare the physical design appropriately before queries arrive.
+
+Unfortunately, for many modern applications ``the future is unknown'', e.g., in scientific databases, social networks, web logs, etc.
+In particular, the query processing patterns follow an exploratory behavior, which changes so arbitrarily that it cannot be predicted.
+Such environments cannot be handled by offline indexing.
+Online indexing \cite{DBLP:conf/icde/BrunoC07,DBLP:conf/sigmod/SchnaitterAMP06} 
+and adaptive indexing \cite{DBLP:conf/cidr/IdreosKM07} 
+are two approaches to automatic physical design in such dynamic environments, but none of them in isolation handles the problem sufficiently.
+Online indexing periodically refines the physical design but it may negatively affect running queries every time
+it needs to use resources for reconsidering the physical design and it may not be quick to follow the workload changes as it reacts only periodically. 
+Adaptive indexing does not have this problem as it introduces continuous, incremental and partial index refinement 
+but it adjusts the physical design only during query processing based on queries.
+
+\textbf{Always Indexing.}
+In this paper, we make the observation that in real systems there are plenty of resources that remain under-utilized and 
+we propose to exploit those resources to be able to better address dynamic and  ad-hoc environments. 
+In particular, we focus on exploiting CPU cycles to the maximum by continuously detecting idle CPU cycles
+and using them to refine the physical design (in parallel with query processing).
+Such idle CPU cycles occur when the system  does not exploit all available cores up to 100\%.
+% (non-peak workload).
+%i.e., either because the workload is not enough to saturate the CPUs or because the current tasks performed for 
+%query processing are not easy to parallelize to the point where all available CPU power can be  exploited
+%or when there are no active user queries (\emph{idle time}).
+We distinguish between ``\emph{idle time}'' as in
+``\emph{there is no user-driven workload at all and the entire CPU (all its hardware contexts) is idle (except possible occasional operating system background activity)}''
+and ``\emph{idle CPU resources}'' as in
+``\emph{the active user-driven workload does / can not use all physically available CPU hardware contexts.}'' 
+Intuitively, there are two options when resources are under-utilized but still there are active queries in the system.
+The first option is to introduce more parallel query processing algorithms to maximize utilization for the existing workload. The second one is to exploit the extra resources towards a different goal (extra indexing actions in our case). We investigate and compare both directions.
+
+
+%\begin{figure}[t]
+%\begin{center}
+%\includegraphics[trim=4cm 22cm 12cm 2.8cm]{qualitative}
+%\caption{Indexing Approaches.}
+%\vspace{-0.4 in}
+%\label{fig:various}
+%\end{center}
+%\end{figure}
+
+\textbf{Holistic Indexing.} In this paper, we introduce a new indexing approach, 
+called \emph{holistic indexing}.
+Holistic indexing  addresses the automatic physical design problem in 
+modern applications with  dynamic and exploratory workloads.
+%\textcolor{red}{where there is no prior knowledge about how many under-utilized CPU resources will be available}.  
+It continuously monitors the workload and the CPU utilization; 
+when idle CPU cycles are detected, holistic indexing exploits them in order to partially and incrementally 
+adjust the physical design based on the collected statistical information.
+Each index refinement step may take only a few microseconds to complete and the system will typically perform
+several such steps in one go depending on available system resources.
+Everything happens in parallel to query processing but without disturbing running queries.
+The net effect is that holistic indexing refines the physical design,
+% there are more chances for future queries to enjoy better  data access patterns.
+improving performance and robustness by enabling better data access patterns for future queries.
+Table~\ref{tab:qualitative} summarizes the qualitative difference between holistic indexing and current state-of-the-art indexing approaches.
+Compared to past approaches, holistic indexing manages to minimize both initialization and maintenance costs, 
+as it relies on partial indexing, and to exploit all possible CPU resources
+%before and/or during query processing, 
+in order to provide a more complete physical design.
+
+\textbf{Contributions.}
+Our contributions are as follows:
+\vspace{-0.5em}
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+\item We introduce the idea of exploiting idle CPU resources towards 
+continuously adapting the physical design to ad-hoc and dynamic workloads.
+\item We discuss  in detail the design of holistic indexing on top of modern column-store architectures, i.e.,
+how to detect and exploit idle CPU resources during query processing.
+\item We implemented holistic indexing in  an open-source column-store, MonetDB \cite{DBLP:journals/debu/IdreosGNMMK12, monetdb}.
+%\textcolor{red}{The code is publicly available in \cite{holindex}.} 
+Through a detailed experimental analysis both with microbenchmarks and with TPC-H 
+we demonstrate that we can exploit idle CPU resources to prepare the physical design better,
+leading to significant improvements over past indexing approaches in dynamic environments. 
+\end{itemize}
+\vspace{-0.5em}
+
+\textbf{Paper Structure.} The rest of the paper is structured as follows:
+Section~\ref{sec:relwork} provides an overview of related work.
+In Section~\ref{sec:background}, we shortly recap the basics of column-store architectures 
+and the basics of adaptive indexing.
+Then, Section~\ref{sec:problem} introduces holistic indexing, while Section~\ref{sec:experiments} presents a detailed experimental analysis.
+Finally, Section~\ref{sec:conclusions} discusses future work and concludes the paper. 
+
+

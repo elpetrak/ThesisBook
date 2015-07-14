@@ -1,0 +1,402 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{introduction}{{1}{10}{Introduction}{chapter.2}{}}
+\citation{DBLP:conf/vldb/AgrawalCKMNS04,DBLP:conf/vldb/DagevilleDDYZZ04,DBLP:conf/vldb/ZilioRLLSGF04}
+\citation{DBLP:conf/sigmod/ChaudhuriN98}
+\citation{DBLP:conf/vldb/ChaudhuriN97}
+\citation{DBLP:conf/sigmod/SchnaitterAMP06}
+\citation{DBLP:conf/icde/BrunoC07}
+\citation{DBLP:conf/icde/LuhringSSS07}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Related Work and Background}{11}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{RelatedWork}{{2}{11}{Related Work and Background}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Row-oriented Storage and Data Access}{11}{section.4}}
+\newlabel{sec:row-oriented}{{2.1}{11}{Row-oriented Storage and Data Access}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Column-stores}{11}{section.5}}
+\newlabel{sec:column-stores}{{2.2}{11}{Column-stores}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Indices}{11}{section.6}}
+\newlabel{sec:indices}{{2.3}{11}{Indices}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Offline Indexing}{11}{section.7}}
+\newlabel{sec:holistic}{{2.4}{11}{Offline Indexing}{section.7}{}}
+\citation{DBLP:conf/cidr/IdreosKM07,CrackRepeat}
+\citation{Hail}
+\citation{DBLP:conf/edbt/GraefeK10}
+\citation{DBLP:conf/sigmod/IdreosKM07}
+\citation{DBLP:conf/sigmod/IdreosKM09}
+\citation{multicore_adaptive,DBLP:journals/pvldb/GraefeHIKM12,DBLP:journals/vldb/GraefeHIKMS14}
+\citation{DBLP:conf/edbt/GraefeK10,DBLP:journals/pvldb/IdreosMKG11}
+\citation{DBLP:conf/tpctc/GraefeIKM10}
+\citation{DBLP:journals/pvldb/HalimIKY12}
+\citation{IndexingKeys}
+\citation{multicore_adaptive,efficient_cracking}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Online Indexing}{12}{section.8}}
+\newlabel{sec:online}{{2.5}{12}{Online Indexing}{section.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Adaptive Indexing}{12}{section.9}}
+\newlabel{sec:cracking}{{2.6}{12}{Adaptive Indexing}{section.9}{}}
+\citation{DBLP:conf/sigmod/ZoumpatianosIP14}
+\citation{Alagiannis:2014:HHA:2588555.2610502}
+\citation{DBLP:conf/cidr/IdreosAJA11}
+\citation{DBLP:conf/cidr/IdreosL13,DBLP:conf/icde/LiarouI14}
+\citation{mc1,DBLP:conf/cidr/HarizopoulosA03,DBLP:conf/sigmod/HarizopoulosSA05,mc2}
+\citation{hash_join_rev,hash_sort_SIMD,Polychroniou:2014:CSM:2588555.2610522,database_SIMD}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Database Systems for the Multi-core Era}{13}{section.10}}
+\newlabel{sec:multicore_systems}{{2.7}{13}{Database Systems for the Multi-core Era}{section.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}The MonetDB System}{13}{section.11}}
+\newlabel{sec:monetdb}{{2.8}{13}{The MonetDB System}{section.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.9}Summary}{13}{section.12}}
+\newlabel{sec:summaryRelated}{{2.9}{13}{Summary}{section.12}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Database Cracking: Fancy Scan, not Poor Man's Sort!}{14}{chapter.13}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{damon}{{3}{14}{Database Cracking: Fancy Scan, not Poor Man's Sort!}{chapter.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{14}{section.14}}
+\newlabel{sec:introduction}{{3.1}{14}{Introduction}{section.14}{}}
+\citation{sorting_SIMD}
+\citation{DBLP:conf/cidr/IdreosKM07}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Costs of Database Operations\relax }}{15}{figure.caption.15}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:motivation}{{3.1}{15}{Costs of Database Operations\relax }{figure.caption.15}{}}
+\citation{DBLP:books/daglib/0068852}
+\citation{DBLP:books/daglib/0028244}
+\citation{wheretime,DBLP:conf/cidr/BonczZN05}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Background \& Related Work}{16}{section.17}}
+\newlabel{sec:damon_related_work}{{3.2}{16}{Background \& Related Work}{section.17}{}}
+\newlabel{sec:cpu-efficiency}{{3.2}{16}{CPU Efficiency Techniques}{section*.20}{}}
+\citation{database_SIMD}
+\citation{hash_join_rev,hash_sort_SIMD}
+\citation{aggr_tlp}
+\citation{hash_join_rev,hash_sort_SIMD}
+\citation{DBLP:conf/vldb/AgrawalCKMNS04,DBLP:conf/vldb/DagevilleDDYZZ04,DBLP:conf/vldb/ZilioRLLSGF04}
+\citation{DBLP:conf/icde/BrunoC07,DBLP:conf/icde/LuhringSSS07,DBLP:conf/sigmod/SchnaitterAMP06}
+\newlabel{sec:indexing-techniques}{{3.2}{17}{Indexing Techniques}{section*.21}{}}
+\citation{DBLP:conf/edbt/GraefeK10,DBLP:conf/cidr/IdreosKM07,DBLP:journals/pvldb/IdreosMKG11}
+\citation{DBLP:conf/cidr/IdreosKM07}
+\citation{quicksort}
+\citation{CrackRepeat}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Original Cracking (single-threaded)\relax }}{18}{figure.caption.24}}
+\newlabel{fig:naive}{{3.2}{18}{Original Cracking (single-threaded)\relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Classic Cracking}{18}{section.22}}
+\newlabel{sec:classic-cracking}{{3.3}{18}{Classic Cracking}{section.22}{}}
+\newlabel{sec:algorithm}{{3.3}{18}{The Algorithm}{section*.23}{}}
+\citation{intelOptimizationManual}
+\newlabel{fig:cracking-cache-misses}{{3.3a}{19}{Subfigure 3 3.3a}{subfigure.26}{}}
+\newlabel{sub@fig:cracking-cache-misses}{{(a)}{a}{Subfigure 3 3.3a\relax }{subfigure.26}{}}
+\newlabel{fig:cracking-non-load-stalling}{{3.3b}{19}{Subfigure 3 3.3b}{subfigure.27}{}}
+\newlabel{sub@fig:cracking-non-load-stalling}{{(b)}{b}{Subfigure 3 3.3b\relax }{subfigure.27}{}}
+\newlabel{fig:cracking-cost-breakdown}{{\caption@xref {fig:cracking-cost-breakdown}{ on input line 34}}{19}{The Algorithm}{subfigure.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Cost Breakdown of Database Operations\relax }}{19}{figure.caption.25}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Cache Misses}}}{19}{subfigure.3.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Costs breakdown by CPU component}}}{19}{subfigure.3.2}}
+\newlabel{sec:analysis}{{3.3}{19}{Analysis}{section*.28}{}}
+\citation{ross2004selection}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}CPU Efficient Cracking}{20}{section.33}}
+\newlabel{sec:cracking-algorithms}{{3.4}{20}{CPU Efficient Cracking}{section.33}{}}
+\newlabel{sec:predication}{{3.4}{20}{Predication}{section*.34}{}}
+\newlabel{sec:vectorization}{{3.4}{21}{Vectorization}{section*.42}{}}
+\newlabel{subsec:single-threaded-simd}{{3.4}{22}{SIMD}{section*.43}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Parallelization}{22}{section.45}}
+\newlabel{subsec:tlp}{{3.5}{22}{Parallelization}{section.45}{}}
+\newlabel{subsubsec:partition-merge}{{3.5}{22}{Partition \& Merge}{section*.46}{}}
+\newlabel{subsubsec:refined-partition-merge}{{3.5}{23}{Refined Partition \& Merge}{section*.48}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Hardware Setup\relax }}{24}{table.caption.54}}
+\newlabel{tab:hardware}{{3.1}{24}{Hardware Setup\relax }{table.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Evaluation}{24}{section.51}}
+\newlabel{sec:results}{{3.6}{24}{Evaluation}{section.51}{}}
+\newlabel{sec:hardware-platforms}{{3.6}{24}{Setup}{section*.52}{}}
+\newlabel{sec:results-1}{{3.6}{24}{Results}{section*.58}{}}
+\newlabel{sec:single-threaded}{{3.6}{24}{Single-threaded Cracking}{section*.71}{}}
+\newlabel{sec:simd}{{3.6}{25}{SIMD}{section*.72}{}}
+\newlabel{sec:multi-threaded}{{3.6}{25}{Multi-threaded}{section*.74}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Summary}{26}{section.75}}
+\newlabel{subsec:damon_conclusion}{{3.7}{26}{Summary}{section.75}{}}
+\newlabel{fig:predicated-consistent}{{3.4a}{27}{Subfigure 3 3.4a}{subfigure.36}{}}
+\newlabel{sub@fig:predicated-consistent}{{(a)}{a}{Subfigure 3 3.4a\relax }{subfigure.36}{}}
+\newlabel{fig:predicated-compare-and-write}{{3.4b}{27}{Subfigure 3 3.4b}{subfigure.37}{}}
+\newlabel{sub@fig:predicated-compare-and-write}{{(b)}{b}{Subfigure 3 3.4b\relax }{subfigure.37}{}}
+\newlabel{fig:predicated-advance-cursor}{{3.4c}{27}{Subfigure 3 3.4c}{subfigure.38}{}}
+\newlabel{sub@fig:predicated-advance-cursor}{{(c)}{c}{Subfigure 3 3.4c\relax }{subfigure.38}{}}
+\newlabel{fig:predicated-backup}{{3.4d}{27}{Subfigure 3 3.4d}{subfigure.39}{}}
+\newlabel{sub@fig:predicated-backup}{{(d)}{d}{Subfigure 3 3.4d\relax }{subfigure.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Predicated Cracking\relax }}{27}{figure.caption.35}}
+\newlabel{fig:predicated-cracking}{{3.4}{27}{Predicated Cracking\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Consistent State}}}{27}{subfigure.4.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Compare \& Write Phase}}}{27}{subfigure.4.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Advance Cursor Phase}}}{27}{subfigure.4.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Backup Phase}}}{27}{subfigure.4.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Cost breakdown of single-threaded implementations\relax }}{28}{figure.caption.41}}
+\newlabel{fig:breakdown-efficient}{{3.5}{28}{Cost breakdown of single-threaded implementations\relax }{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Vectorized Cracking\relax }}{28}{figure.caption.44}}
+\newlabel{fig:vectorized-cracking}{{3.6}{28}{Vectorized Cracking\relax }{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Simple Partition \& Merge (multi-threaded)\relax }}{28}{figure.caption.47}}
+\newlabel{fig:mcrack1}{{3.7}{28}{Simple Partition \& Merge (multi-threaded)\relax }{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Refined Partition \& Merge (multi-threaded)\relax }}{29}{figure.caption.49}}
+\newlabel{fig:mcrack2}{{3.8}{29}{Refined Partition \& Merge (multi-threaded)\relax }{figure.caption.49}{}}
+\newlabel{fig:single-threaded-desktop}{{3.9a}{30}{Subfigure 3 3.9a}{subfigure.61}{}}
+\newlabel{sub@fig:single-threaded-desktop}{{(a)}{a}{Subfigure 3 3.9a\relax }{subfigure.61}{}}
+\newlabel{fig:single-threaded-workstation}{{3.9b}{30}{Subfigure 3 3.9b}{subfigure.62}{}}
+\newlabel{sub@fig:single-threaded-workstation}{{(b)}{b}{Subfigure 3 3.9b\relax }{subfigure.62}{}}
+\newlabel{fig:single-threaded-server1}{{3.9c}{30}{Subfigure 3 3.9c}{subfigure.63}{}}
+\newlabel{sub@fig:single-threaded-server1}{{(c)}{c}{Subfigure 3 3.9c\relax }{subfigure.63}{}}
+\newlabel{fig:single-threaded-server2}{{3.9d}{30}{Subfigure 3 3.9d}{subfigure.64}{}}
+\newlabel{sub@fig:single-threaded-server2}{{(d)}{d}{Subfigure 3 3.9d\relax }{subfigure.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Single Threaded Performance\relax }}{30}{figure.caption.60}}
+\newlabel{fig:single-threaded-performance}{{3.9}{30}{Single Threaded Performance\relax }{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Desktop}}}{30}{subfigure.9.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Workstation}}}{30}{subfigure.9.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Server}}}{30}{subfigure.9.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {High-End Server}}}{30}{subfigure.9.4}}
+\newlabel{fig:multi-threaded-desktop}{{3.10a}{32}{Subfigure 3 3.10a}{subfigure.67}{}}
+\newlabel{sub@fig:multi-threaded-desktop}{{(a)}{a}{Subfigure 3 3.10a\relax }{subfigure.67}{}}
+\newlabel{fig:multi-threaded-workstation}{{3.10b}{32}{Subfigure 3 3.10b}{subfigure.68}{}}
+\newlabel{sub@fig:multi-threaded-workstation}{{(b)}{b}{Subfigure 3 3.10b\relax }{subfigure.68}{}}
+\newlabel{fig:multi-threaded-server1}{{3.10c}{32}{Subfigure 3 3.10c}{subfigure.69}{}}
+\newlabel{sub@fig:multi-threaded-server1}{{(c)}{c}{Subfigure 3 3.10c\relax }{subfigure.69}{}}
+\newlabel{fig:multi-threaded-server2}{{3.10d}{32}{Subfigure 3 3.10d}{subfigure.70}{}}
+\newlabel{sub@fig:multi-threaded-server2}{{(d)}{d}{Subfigure 3 3.10d\relax }{subfigure.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Multi Threaded Performance\relax }}{32}{figure.caption.66}}
+\newlabel{fig:multi-threaded-performance}{{3.10}{32}{Multi Threaded Performance\relax }{figure.caption.66}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Desktop}}}{32}{subfigure.10.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Workstation}}}{32}{subfigure.10.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Server}}}{32}{subfigure.10.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {High-End Server}}}{32}{subfigure.10.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces SIMD Processing Performance at 50\% Selectivity\relax }}{33}{figure.caption.73}}
+\newlabel{fig:simd-performance}{{3.11}{33}{SIMD Processing Performance at 50\% Selectivity\relax }{figure.caption.73}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Holistic Indexing in Main-memory Column-stores}{34}{chapter.76}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{holistic}{{4}{34}{Holistic Indexing in Main-memory Column-stores}{chapter.76}{}}
+\citation{UsableDatabases}
+\citation{exploration,hinge,hazy,earl}
+\citation{hadoop+}
+\citation{nodb,hstore,hyper,bitweaving}
+\citation{DBLP:conf/vldb/AgrawalCKMNS04,DBLP:conf/vldb/DagevilleDDYZZ04,DBLP:conf/vldb/ZilioRLLSGF04}
+\citation{DBLP:conf/icde/BrunoC07,DBLP:conf/sigmod/SchnaitterAMP06}
+\citation{DBLP:conf/cidr/IdreosKM07}
+\newlabel{tab:qualitative}{{\caption@xref {tab:qualitative}{ on input line 18}}{35}{Introduction}{table.caption.78}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Qualitative difference among offline, online, adaptive and holistic indexing.\relax }}{35}{table.caption.78}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{35}{section.77}}
+\newlabel{sec:intro}{{4.1}{35}{Introduction}{section.77}{}}
+\citation{DBLP:journals/debu/IdreosGNMMK12,monetdb}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Holistic Indexing}{37}{section.79}}
+\newlabel{sec:problem}{{4.2}{37}{Holistic Indexing}{section.79}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Preliminary Definitions}{38}{subsection.80}}
+\newlabel{subsec:definitions}{{4.2.1}{38}{Preliminary Definitions}{subsection.80}{}}
+\newlabel{eq:d}{{4.1}{39}{Preliminary Definitions}{equation.81}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}System Design}{39}{subsection.82}}
+\newlabel{subsec:design}{{4.2.2}{39}{System Design}{subsection.82}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Tuning actions.\relax }}{41}{figure.caption.83}}
+\newlabel{fig:diagram}{{4.1}{41}{Tuning actions.\relax }{figure.caption.83}{}}
+\citation{DBLP:journals/pvldb/GraefeHIKM12,DBLP:journals/vldb/GraefeHIKMS14}
+\citation{DBLP:journals/pvldb/GraefeHIKM12,DBLP:journals/vldb/GraefeHIKMS14}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Concurrency control in holistic indexing.\relax }}{42}{figure.caption.84}}
+\newlabel{fig:conc}{{4.2}{42}{Concurrency control in holistic indexing.\relax }{figure.caption.84}{}}
+\citation{DBLP:conf/sigmod/IdreosKM09}
+\citation{DBLP:conf/sigmod/IdreosKM09}
+\citation{DBLP:journals/pvldb/GraefeHIKM12,DBLP:journals/vldb/GraefeHIKMS14}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\citation{DBLP:conf/sigmod/IdreosKM09}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Refined Partition \& Merge (multi-threaded) \cite  {efficient_cracking}.\relax }}{44}{figure.caption.85}}
+\newlabel{fig:mt-cracking}{{4.3}{44}{Refined Partition \& Merge (multi-threaded) \cite {efficient_cracking}.\relax }{figure.caption.85}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Vectorized Cracking \cite  {efficient_cracking}.\relax }}{44}{figure.caption.86}}
+\newlabel{fig:vectorized-cracking}{{4.4}{44}{Vectorized Cracking \cite {efficient_cracking}.\relax }{figure.caption.86}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Improving performance with holistic indexing.\relax }}{44}{figure.caption.87}}
+\newlabel{fig:motiv}{{4.5}{44}{Improving performance with holistic indexing.\relax }{figure.caption.87}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Performance}}}{44}{subfigure.5.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Performance Breakdown}}}{44}{subfigure.5.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Index Partitions}}}{44}{subfigure.5.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Idle CPU Utilization}}}{44}{subfigure.5.4}}
+\citation{hash_join_rev}
+\citation{psort_site}
+\citation{efficient_cracking}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Experimental Analysis}{45}{section.92}}
+\newlabel{sec:experiments}{{4.3}{45}{Experimental Analysis}{section.92}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Improving over State-of-the-Art Indexing}{45}{subsection.93}}
+\newlabel{subsec:motivation}{{4.3.1}{45}{Improving over State-of-the-Art Indexing}{subsection.93}{}}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Performance improves if we distribute the threads equally between user queries and holistic workers.\relax }}{47}{figure.caption.94}}
+\newlabel{fig:thread_distribution}{{4.6}{47}{Performance improves if we distribute the threads equally between user queries and holistic workers.\relax }{figure.caption.94}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \relax \fontsize  {10}{12}\selectfont  \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Adaptive Ind.}\relax }}{48}{figure.caption.95}}
+\newlabel{fig:cost_graph}{{4.7}{48}{\small {Adaptive Ind.}\relax }{figure.caption.95}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Indexing.\relax }}{48}{figure.caption.96}}
+\newlabel{fig:apriori}{{4.8}{48}{Indexing.\relax }{figure.caption.96}{}}
+\citation{efficient_cracking}
+\citation{multicore_adaptive}
+\citation{DBLP:journals/pvldb/HalimIKY12}
+\newlabel{fig:random_pred}{{4.9a}{49}{Subfigure 4 4.9a}{subfigure.98}{}}
+\newlabel{sub@fig:random_pred}{{(a)}{a}{Subfigure 4 4.9a\relax }{subfigure.98}{}}
+\newlabel{fig:skew_pred}{{4.9b}{49}{Subfigure 4 4.9b}{subfigure.99}{}}
+\newlabel{sub@fig:skew_pred}{{(b)}{b}{Subfigure 4 4.9b\relax }{subfigure.99}{}}
+\newlabel{fig:periodic_pred}{{4.9c}{49}{Subfigure 4 4.9c}{subfigure.100}{}}
+\newlabel{sub@fig:periodic_pred}{{(c)}{c}{Subfigure 4 4.9c\relax }{subfigure.100}{}}
+\newlabel{fig:sequential_pred}{{4.9d}{49}{Subfigure 4 4.9d}{subfigure.101}{}}
+\newlabel{sub@fig:sequential_pred}{{(d)}{d}{Subfigure 4 4.9d\relax }{subfigure.101}{}}
+\newlabel{fig:sequential_pred}{{4.9e}{49}{Subfigure 4 4.9e}{subfigure.102}{}}
+\newlabel{sub@fig:sequential_pred}{{(e)}{e}{Subfigure 4 4.9e\relax }{subfigure.102}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Various workload patterns.\relax }}{49}{figure.caption.97}}
+\newlabel{fig:rob1}{{4.9}{49}{Various workload patterns.\relax }{figure.caption.97}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Random}}}{49}{subfigure.9.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Skewed}}}{49}{subfigure.9.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Periodic}}}{49}{subfigure.9.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Sequential}}}{49}{subfigure.9.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {SkyServer}}}{49}{subfigure.9.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Holistic indexing utilizes resources more effectively than multi-core state-of-the-art adaptive indexing baselines.\relax }}{49}{figure.caption.103}}
+\newlabel{fig:multicore}{{4.10}{49}{Holistic indexing utilizes resources more effectively than multi-core state-of-the-art adaptive indexing baselines.\relax }{figure.caption.103}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Holistic Vs. Multi-core Adaptive Indexing}{49}{subsection.104}}
+\newlabel{subsec:multicore}{{4.3.2}{49}{Holistic Vs. Multi-core Adaptive Indexing}{subsection.104}{}}
+\citation{multicore_adaptive}
+\citation{DBLP:journals/pvldb/IdreosMKG11}
+\citation{DBLP:conf/sigmod/IdreosKM09}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Holistic indexing is robust.\relax }}{51}{figure.caption.105}}
+\newlabel{fig:stochastic}{{4.11}{51}{Holistic indexing is robust.\relax }{figure.caption.105}{}}
+\newlabel{fig:random_ma}{{4.12a}{51}{Subfigure 4 4.12a}{subfigure.107}{}}
+\newlabel{sub@fig:random_ma}{{(a)}{a}{Subfigure 4 4.12a\relax }{subfigure.107}{}}
+\newlabel{fig:random_per_ma}{{4.12b}{51}{Subfigure 4 4.12b}{subfigure.108}{}}
+\newlabel{sub@fig:random_per_ma}{{(b)}{b}{Subfigure 4 4.12b\relax }{subfigure.108}{}}
+\newlabel{fig:skew_ma}{{4.12c}{51}{Subfigure 4 4.12c}{subfigure.109}{}}
+\newlabel{sub@fig:skew_ma}{{(c)}{c}{Subfigure 4 4.12c\relax }{subfigure.109}{}}
+\newlabel{fig:skew_per_ma}{{4.12d}{51}{Subfigure 4 4.12d}{subfigure.110}{}}
+\newlabel{sub@fig:skew_per_ma}{{(d)}{d}{Subfigure 4 4.12d\relax }{subfigure.110}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces More performance gains for holistic indexing as more attributes exist in a schema. All strategies have similar performance. \relax }}{51}{figure.caption.106}}
+\newlabel{fig:hvsc}{{4.12}{51}{More performance gains for holistic indexing as more attributes exist in a schema. All strategies have similar performance. \relax }{figure.caption.106}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Random Attributes - Random Values}}}{51}{subfigure.12.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Random Attributes - Periodic Values}}}{51}{subfigure.12.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Skewed Attributes - Random Values}}}{51}{subfigure.12.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Skewed Attributes - Periodic Values}}}{51}{subfigure.12.4}}
+\citation{SkyServer}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Robustness}{52}{subsection.111}}
+\newlabel{subsec:robustness}{{4.3.3}{52}{Robustness}{subsection.111}{}}
+\newlabel{fig:random_pred}{{4.13a}{53}{Subfigure 4 4.13a}{subfigure.113}{}}
+\newlabel{sub@fig:random_pred}{{(a)}{a}{Subfigure 4 4.13a\relax }{subfigure.113}{}}
+\newlabel{fig:skew_pred}{{4.13b}{53}{Subfigure 4 4.13b}{subfigure.114}{}}
+\newlabel{sub@fig:skew_pred}{{(b)}{b}{Subfigure 4 4.13b\relax }{subfigure.114}{}}
+\newlabel{fig:periodic_pred}{{4.13c}{53}{Subfigure 4 4.13c}{subfigure.115}{}}
+\newlabel{sub@fig:periodic_pred}{{(c)}{c}{Subfigure 4 4.13c\relax }{subfigure.115}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces TPC-H results (Scale Factor 10, ``pre-sorted'' times exclude pre-sorting costs; Q1,6,12: 8 sec).\relax }}{53}{figure.caption.112}}
+\newlabel{fig:tpch}{{4.13}{53}{TPC-H results (Scale Factor 10, ``pre-sorted'' times exclude pre-sorting costs; Q1,6,12: 8 sec).\relax }{figure.caption.112}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {TPC-H Query 1}}}{53}{subfigure.13.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {TPC-H Query 6}}}{53}{subfigure.13.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {TPC-H Query 12}}}{53}{subfigure.13.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}More Benefits with Complex Schemas}{53}{subsection.116}}
+\newlabel{subsec:strategies}{{4.3.4}{53}{More Benefits with Complex Schemas}{subsection.116}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Performance of holistic indexing improves while the number of index refinements $x$ increases.\relax }}{54}{figure.caption.117}}
+\newlabel{fig:cracks_number}{{4.14}{54}{Performance of holistic indexing improves while the number of index refinements $x$ increases.\relax }{figure.caption.117}{}}
+\citation{tpch}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Design Decisions}{55}{subsection.118}}
+\newlabel{subsec:decisions}{{4.3.5}{55}{Design Decisions}{subsection.118}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.6}TPC-H}{55}{subsection.119}}
+\newlabel{subsec:tpch}{{4.3.6}{55}{TPC-H}{subsection.119}{}}
+\citation{DBLP:conf/sigmod/IdreosKM07}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.7}Updates}{56}{subsection.120}}
+\newlabel{subsec:updates}{{4.3.7}{56}{Updates}{subsection.120}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Updates.\relax }}{56}{figure.caption.121}}
+\newlabel{fig:updates}{{4.15}{56}{Updates.\relax }{figure.caption.121}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.8}Varying Number of Clients}{56}{subsection.122}}
+\newlabel{subsec:varcpu}{{4.3.8}{56}{Varying Number of Clients}{subsection.122}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Varying number of clients.\relax }}{56}{figure.caption.123}}
+\newlabel{fig:threshold}{{4.16}{56}{Varying number of clients.\relax }{figure.caption.123}{}}
+\bibstyle{unsrtnat}
+\bibdata{Bibliography}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{57}{figure.caption.123}}
+\newlabel{Bibliography}{{4.3.8}{57}{Varying Number of Clients}{figure.caption.123}{}}
+\bibcite{DBLP:conf/vldb/AgrawalCKMNS04}{{1}{2004}{{Agrawal et~al.}}{{Agrawal, Chaudhuri, Koll{\'a}r, Marathe, Narasayya, and Syamala}}}
+\bibcite{DBLP:conf/vldb/DagevilleDDYZZ04}{{2}{2004}{{Dageville et~al.}}{{Dageville, Das, Dias, Yagoub, Za\"{\i }t, and Ziauddin}}}
+\bibcite{DBLP:conf/vldb/ZilioRLLSGF04}{{3}{2004}{{Zilio et~al.}}{{Zilio, Rao, Lightstone, Lohman, Storm, Garcia-Arellano, and Fadden}}}
+\bibcite{DBLP:conf/sigmod/ChaudhuriN98}{{4}{1998}{{Chaudhuri and Narasayya}}{{}}}
+\bibcite{DBLP:conf/vldb/ChaudhuriN97}{{5}{1997}{{Chaudhuri and Narasayya}}{{}}}
+\bibcite{DBLP:conf/sigmod/SchnaitterAMP06}{{6}{2006}{{Schnaitter et~al.}}{{Schnaitter, Abiteboul, Milo, and Polyzotis}}}
+\bibcite{DBLP:conf/icde/BrunoC07}{{7}{2007}{{Bruno and Chaudhuri}}{{}}}
+\bibcite{DBLP:conf/icde/LuhringSSS07}{{8}{2007}{{L{\"u}hring et~al.}}{{L{\"u}hring, Sattler, Schmidt, and Schallehn}}}
+\bibcite{DBLP:conf/cidr/IdreosKM07}{{9}{2007{}}{{Idreos et~al.}}{{Idreos, Kersten, and Manegold}}}
+\bibcite{CrackRepeat}{{10}{2013}{{Schuhknecht et~al.}}{{Schuhknecht, Jindal, and Dittrich}}}
+\bibcite{Hail}{{11}{2013}{{Richter et~al.}}{{Richter, Quian\IeC {\'e}-Ruiz, Schuh, and Dittrich}}}
+\bibcite{DBLP:conf/edbt/GraefeK10}{{12}{2010{}}{{Graefe and Kuno}}{{}}}
+\bibcite{DBLP:conf/sigmod/IdreosKM07}{{13}{2007{}}{{Idreos et~al.}}{{Idreos, Kersten, and Manegold}}}
+\bibcite{DBLP:conf/sigmod/IdreosKM09}{{14}{2009}{{Idreos et~al.}}{{Idreos, Kersten, and Manegold}}}
+\bibcite{multicore_adaptive}{{15}{2014}{{Alvarez et~al.}}{{Alvarez, Schuhknecht, Dittrich, and Richter}}}
+\bibcite{DBLP:journals/pvldb/GraefeHIKM12}{{16}{2012}{{Graefe et~al.}}{{Graefe, Halim, Idreos, Kuno, and Manegold}}}
+\bibcite{DBLP:journals/vldb/GraefeHIKMS14}{{17}{2014}{{Graefe et~al.}}{{Graefe, Halim, Idreos, Kuno, Manegold, and Seeger}}}
+\bibcite{DBLP:journals/pvldb/IdreosMKG11}{{18}{2011{}}{{Idreos et~al.}}{{Idreos, Manegold, Kuno, and Graefe}}}
+\bibcite{DBLP:conf/tpctc/GraefeIKM10}{{19}{2010}{{Graefe et~al.}}{{Graefe, Idreos, Kuno, and Manegold}}}
+\bibcite{DBLP:journals/pvldb/HalimIKY12}{{20}{2012}{{Halim et~al.}}{{Halim, Idreos, Karras, and Yap}}}
+\bibcite{IndexingKeys}{{21}{2010{}}{{Graefe and Kuno}}{{}}}
+\bibcite{efficient_cracking}{{22}{2014}{{Pirk et~al.}}{{Pirk, Petraki, Idreos, Manegold, and Kersten}}}
+\bibcite{DBLP:conf/sigmod/ZoumpatianosIP14}{{23}{2014}{{Zoumpatianos et~al.}}{{Zoumpatianos, Idreos, and Palpanas}}}
+\bibcite{Alagiannis:2014:HHA:2588555.2610502}{{24}{2014}{{Alagiannis et~al.}}{{Alagiannis, Idreos, and Ailamaki}}}
+\bibcite{DBLP:conf/cidr/IdreosAJA11}{{25}{2011{}}{{Idreos et~al.}}{{Idreos, Alagiannis, Johnson, and Ailamaki}}}
+\bibcite{DBLP:conf/cidr/IdreosL13}{{26}{2013}{{Idreos and Liarou}}{{}}}
+\bibcite{DBLP:conf/icde/LiarouI14}{{27}{2014}{{Liarou and Idreos}}{{}}}
+\bibcite{mc1}{{28}{2010}{{Hardavellas et~al.}}{{Hardavellas, Ferdman, Falsafi, and Ailamaki}}}
+\bibcite{DBLP:conf/cidr/HarizopoulosA03}{{29}{2003}{{Harizopoulos and Ailamaki}}{{}}}
+\bibcite{DBLP:conf/sigmod/HarizopoulosSA05}{{30}{2005}{{Harizopoulos et~al.}}{{Harizopoulos, Shkapenyuk, and Ailamaki}}}
+\bibcite{mc2}{{31}{2009}{{Johnson et~al.}}{{Johnson, Pandis, Hardavellas, Ailamaki, and Falsafi}}}
+\bibcite{hash_join_rev}{{32}{2013}{{Balkesen et~al.}}{{Balkesen, Alonso, Teubner, and {\"O}zsu}}}
+\bibcite{hash_sort_SIMD}{{33}{2009}{{Kim et~al.}}{{Kim, Sedlar, Chhugani, Kaldewey, Nguyen, Blas, Lee, Satish, and Dubey}}}
+\bibcite{Polychroniou:2014:CSM:2588555.2610522}{{34}{2014}{{Polychroniou and Ross}}{{}}}
+\bibcite{database_SIMD}{{35}{2002}{{Zhou and Ross}}{{}}}
+\bibcite{sorting_SIMD}{{36}{2008}{{Chhugani et~al.}}{{Chhugani, Nguyen, Lee, Macy, Hagog, Chen, Baransi, Kumar, and Dubey}}}
+\bibcite{DBLP:books/daglib/0068852}{{37}{1991}{{Johnson}}{{}}}
+\bibcite{DBLP:books/daglib/0028244}{{38}{2012}{{Hennessy and Patterson}}{{}}}
+\bibcite{wheretime}{{39}{1999}{{Ailamaki et~al.}}{{Ailamaki, DeWitt, Hill, and Wood}}}
+\bibcite{DBLP:conf/cidr/BonczZN05}{{40}{2005}{{Boncz et~al.}}{{Boncz, Zukowski, and Nes}}}
+\bibcite{aggr_tlp}{{41}{2007}{{Cieslewicz and Ross}}{{}}}
+\bibcite{quicksort}{{42}{1961}{{Hoare}}{{}}}
+\bibcite{intelOptimizationManual}{{43}{June, 2013}{{int}}{{}}}
+\bibcite{ross2004selection}{{44}{2004}{{Ross}}{{}}}
+\bibcite{UsableDatabases}{{45}{2007}{{Jagadish et~al.}}{{Jagadish, Chapman, Elkiss, Jayapandian, Li, Nandi, and Yu}}}
+\bibcite{exploration}{{46}{2011}{{Kersten et~al.}}{{Kersten, Idreos, Manegold, and Liarou}}}
+\bibcite{hinge}{{47}{2013}{{Khurana and Deshpande}}{{}}}
+\bibcite{hazy}{{48}{2013}{{Kumar et~al.}}{{Kumar, Niu, and R{\'e}}}}
+\bibcite{earl}{{49}{2013}{{Laptev et~al.}}{{Laptev, Zeng, and Zaniolo}}}
+\bibcite{hadoop+}{{50}{2010}{{Dittrich et~al.}}{{Dittrich, Quian{\'e}-Ruiz, Jindal, Kargin, Setty, and Schad}}}
+\bibcite{nodb}{{51}{2012}{{Alagiannis et~al.}}{{Alagiannis, Borovica, Branco, Idreos, and Ailamaki}}}
+\bibcite{hstore}{{52}{2008}{{Kallman et~al.}}{{Kallman, Kimura, Natkins, Pavlo, Rasin, Zdonik, Jones, Madden, Stonebraker, Zhang, Hugg, and Abadi}}}
+\bibcite{hyper}{{53}{2011}{{Kemper and Neumann}}{{}}}
+\bibcite{bitweaving}{{54}{2013}{{Li and Patel}}{{}}}
+\bibcite{DBLP:journals/debu/IdreosGNMMK12}{{55}{2012}{{Idreos et~al.}}{{Idreos, Groffen, Nes, Manegold, Mullender, and Kersten}}}
+\bibcite{monetdb}{{56}{}{{ZZZ}}{{}}}
+\bibcite{psort_site}{{57}{}{{pso}}{{}}}
+\bibcite{SkyServer}{{58}{}{{Sky}}{{}}}
+\bibcite{tpch}{{59}{}{{tpc}}{{}}}
+\citation{efficient_cracking}
+\citation{efficient_cracking}
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{64}{dummy.125}}
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{65}{dummy.127}}
+\gdef \LT@i {\LT@entry 
+    {1}{38.94902pt}\LT@entry 
+    {1}{130.6858pt}}
+\@writefile{toc}{\contentsline {chapter}{Abbreviations}{66}{dummy.129}}
+\@writefile{toc}{\contentsline {chapter}{Summary}{67}{table.131}}
+\newlabel{Summary}{{3}{67}{Summary}{chapter*.132}{}}
+\@writefile{toc}{\contentsline {chapter}{Samenvatting}{68}{chapter*.132}}
+\newlabel{samenvatting}{{3}{68}{Samenvatting}{chapter*.133}{}}
+\@writefile{toc}{\contentsline {chapter}{Acknowledgements}{69}{chapter*.133}}
+\newlabel{acknowledgements}{{3}{69}{Acknowledgements}{chapter*.134}{}}
+\@writefile{toc}{\contentsline {chapter}{SIKS Dissertation Series}{70}{chapter*.134}}
+\newlabel{siksseries}{{3}{70}{SIKS Dissertation Series}{chapter*.135}{}}

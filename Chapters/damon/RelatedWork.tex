@@ -1,0 +1,107 @@
+\section{Background \& Related Work}
+\label{sec:damon_related_work} 
+
+Before discussing the efficient
+implementation of \emph{Database Cracking}, let us briefly establish
+the background knowledge regarding
+\begin{inparaenum}[a)]
+\item some architectural traits of modern CPUs that are relevant with
+respect to implementation efficiency, and
+\item partial and adaptive indexing techniques that are related to our
+approach.
+\end{inparaenum}
+
+\subsection*{CPU Efficiency Techniques}
+\label{sec:cpu-efficiency} Advances in processor architectures and
+semiconductors have improved the performance of computer systems
+steadily over the years.  However, the stagnation of clock frequency
+prompted the necessity for parallelization.  Thus, modern CPUs provide
+several forms of parallelism, such as instruction level parallelism,
+data level parallelism and thread level parallelism.
+
+
+Processors achieve \emph{Instruction Level Parallelism (ILP)} by
+overlapping the execution of multiple instructions in a single clock
+cycle \cite{DBLP:books/daglib/0068852}.  Independent instructions are
+executed in parallel if there are sufficient resources for all of
+them.  ILP can be exploited by using multiple execution units to
+execute multiple instructions simultaneously (superscalar execution),
+or by executing instructions in any order that does not violate data
+dependencies (out-of-order execution) or even predicting the execution
+of instructions (speculative execution)
+\cite{DBLP:books/daglib/0028244}.  Thus, care has to be taken to
+ensure that there are sufficiently many independent instructions
+\cite{wheretime, DBLP:conf/cidr/BonczZN05}.
+
+Performance improvement can also be achieved by exploiting \emph{Data
+  Level Parallelism (DLP)}. In its extreme, vector processors operate
+on the input arrays using one instruction per vector operation. In
+practice, most modern CPUs provide \simd{} instructions that operate
+on a limited number of values (vector lengths ranging from 128 to
+512 bit).
+
+Thus, fewer instructions are fetched and executed.  However, vector
+instructions usually have longer latencies and lower throughput than
+their scalar counterparts. They also rely on their inputs being stored
+in a contiguous (often even \simd{}-word-aligned) memory region. In
+the most modern instruction sets (AVX2 and AVX-512), there is support
+for gather (AVX2 \& AVX-512) and scatter (only AVX-512) instructions
+that fetch data from, respectively save data to, multiple, non-contiguous memory locations.
+Recent papers study the implementation of various database operations,
+e.g., scans, aggregations, index operations and joins, using SIMD
+instructions~\cite{database_SIMD}, while \cite{hash_join_rev,
+  hash_sort_SIMD} provide a thorough analysis of hash join and
+sort-merge join using SIMD.  These operations significantly benefit
+from the SIMD technology by exploiting DLP and by eliminating branch
+mispredictions.
+
+\emph{Thread Level Parallelism (TLP)} allows multiple threads to work
+simultaneously.  This allows an application to take advantage of TLP
+by splitting into independent parts that run in parallel.  The
+advantage of multithreading is even more significant in systems that
+are equipped with multiple CPUs or multicore CPUs (chip
+multiprocessors).  In addition, many chip multiprocessors incorporate
+the hyper threading technology which increases parallelism by allowing
+each physical core to appear as two logical cores in the operating
+system. Heavy load components such as instruction pipelines, registers or
+the execution units are usually replicated while others, such as caches,
+are shared among the logical cores.  Basic database operations have
+been reexamined exploiting TLP, e.g., aggregations \cite{aggr_tlp} and
+join algorithms \cite{hash_join_rev,hash_sort_SIMD}.
+
+
+\subsection*{Indexing Techniques}
+\label{sec:indexing-techniques} In the majority of automated index
+tuning approaches, index tuning is clearly distinct from query
+processing.  Offline indexing approaches
+\cite{DBLP:conf/vldb/AgrawalCKMNS04, DBLP:conf/vldb/DagevilleDDYZZ04,
+DBLP:conf/vldb/ZilioRLLSGF04} analyze a given workload and
+select/create the necessary indexes before the workload enters the
+system, whereas online indexing approaches
+\cite{DBLP:conf/icde/BrunoC07, DBLP:conf/icde/LuhringSSS07,
+DBLP:conf/sigmod/SchnaitterAMP06} continuously monitor the workload
+and periodically reevaluate the index selection.  In both cases,
+indexes equally cover all data items, even if some of them are not
+heavily queried.  Thus, both index tuning and index creation may
+negatively affect the workload performance if there is not enough idle
+time to build the indexes or/and if the workload arbitrarily changes.
+
+Adaptive indexing \cite{ DBLP:conf/edbt/GraefeK10,
+  DBLP:conf/cidr/IdreosKM07, DBLP:journals/pvldb/IdreosMKG11} is a
+recent, lightweight approach to self-tuning databases: data
+reorganization is integrated with query processing.  \emph{Database
+  Cracking} \cite{DBLP:conf/cidr/IdreosKM07} is an implementation of
+the adaptive indexing concept.  Database Cracking initializes a
+partial index for an attribute the first time it is queried.  Future
+queries on the same attribute further refine the index by partitioning
+the data using the supplied query predicates as pivots (similar to
+quicksort \cite{quicksort}) and updating the secondary dictionary
+structure. Since the reorganization of the index is part of the select
+operator, \emph{Database Cracking} can be seen as an alternative
+implementation of scanning. While dictionary maintenance becomes the
+dominant cost factor as the average partition size
+decreases~\cite{CrackRepeat}, the pivoted partitioning is the most
+important factor in the beginning. In this paper we focus purely on
+this step of the process, disregarding dictionary maintenance or order
+propagation to other columns.
+

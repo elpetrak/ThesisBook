@@ -1,0 +1,141 @@
+\chapter{Related Work and Background} % Main chapter title
+
+\label{RelatedWork} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Chapter 2. \emph{Related Work and Background}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+Intro
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Row-oriented Storage and Data Access}
+\label{sec:row-oriented}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Column-stores}
+\label{sec:column-stores}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Indices}
+\label{sec:indices}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Offline Indexing}
+\label{sec:holistic}
+
+Offline indexing is the earliest approach on self-tuning database systems.
+Nowadays, all major database products offer auto-tuning tools \cite{DBLP:conf/vldb/AgrawalCKMNS04,DBLP:conf/vldb/DagevilleDDYZZ04, DBLP:conf/vldb/ZilioRLLSGF04} to automate the database physical design.
+Auto-tuning tools mainly rely on a ``what-if analysis'' \cite{DBLP:conf/sigmod/ChaudhuriN98} and close interaction with the optimizer \cite{DBLP:conf/vldb/ChaudhuriN97} to decide which indices are potentially more useful for a given workload.
+
+Offline indexing  requires heavy involvement of a database administrator (DBA).
+Specifically, a DBA invokes the tool and provides its input, i.e., a representative workload.
+The tool analyzes the given workload and recommends an appropriate physical design.
+However, the DBA is the one that decides which of the changes in the physical design should be applied.
+The main limitation of offline indexing appears when the workload cannot be predicted and/or there is not enough idle time to invest in the offline analysis and the physical design implementation. 
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Online Indexing}
+\label{sec:online}
+
+Online indexing addresses the limitation of offline indexing.
+Instead of making all decisions a priori, the system continuously monitors the workload and the physical design is periodically reevaluated.
+System COLT \cite{DBLP:conf/sigmod/SchnaitterAMP06} was one of the first online indexing approaches.
+COLT continuously monitors the workload and periodically in specific epochs, i.e., every N queries, it reconsiders the physical design.
+The recommended physical design might demand creation of new indices or dropping of old ones.
+COLT requires many calls to the optimizer to obtain cost estimations.
+A ``lighter'' approach, i.e., requiring less calls to the optimizer, was proposed later \cite{DBLP:conf/icde/BrunoC07}.
+Soft indices \cite{DBLP:conf/icde/LuhringSSS07} extended the previous 
+online approaches by building full indices on-the-fly concurrently with queries on the same data, sharing the scan operator.
+
+The main limitation of online indexing is that reorganization  of the physical design can be a costly action
+that a) requires a significant amount of time to complete and b) requires a lot of resources.
+This means that online indexing is appropriate mainly for moderately dynamic workloads where the query patterns do not change
+very frequently. Otherwise, it may be that by the time we finish adapting the physical design, the workload has changed again
+leading to a suboptimal performance.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Adaptive Indexing}
+\label{sec:cracking}
+
+
+Adaptive indexing is the latest and the most lightweight approach in self-tuning databases.
+Adaptive indexing  addresses the limitations of offline and online indexing for dynamic workloads; 
+it  instantly adjusts to workload changes by building or refining indices partially and incrementally as part of query processing.
+By reacting to every single query with lightweight actions, adaptive indexing manages to instantly adapt
+to a changing workload. As more queries arrive, the more the indices are refined 
+%according to the workload 
+and the more performance improves.
+Adaptive indexing has been studied in the context of main-memory column-stores \cite{DBLP:conf/cidr/IdreosKM07, CrackRepeat}, Hadoop \cite{Hail}
+as well as for improving more traditional disk-based settings \cite{DBLP:conf/edbt/GraefeK10}.
+It has been shown to work for many core database architecture issues 
+such as updates \cite{DBLP:conf/sigmod/IdreosKM07}, multi-attribute queries \cite{DBLP:conf/sigmod/IdreosKM09}, concurrency control \cite{multicore_adaptive, DBLP:journals/pvldb/GraefeHIKM12, DBLP:journals/vldb/GraefeHIKMS14}, partition-merge-like logic \cite{DBLP:conf/edbt/GraefeK10,DBLP:journals/pvldb/IdreosMKG11}. In addition, \cite{DBLP:conf/tpctc/GraefeIKM10} shows how to benchmark adaptive indexing techniques, while stochastic database cracking \cite{DBLP:journals/pvldb/HalimIKY12} shows how to be robust on various workloads and \cite{IndexingKeys} shows how adaptive indexing can apply to key columns.
+Finally, recent work on parallel adaptive indexing studies CPU-efficient implementations and proposes algorithms to exploit multi-cores \cite{multicore_adaptive,efficient_cracking}.
+ 
+The main limitation of adaptive indexing is that it works only during query processing.
+In this way, the only opportunity to improve the physical design is only when queries arrive.
+
+Recently, adaptive indexing concepts have been extended to provide adaptive indexes for time series data \cite{DBLP:conf/sigmod/ZoumpatianosIP14}
+as well as using incoming queries for more broad storage layout decisions, 
+i.e., reorganizing base data (columns/rows) according to incoming query requests \cite{Alagiannis:2014:HHA:2588555.2610502}, 
+or even about which data should be loaded \cite{DBLP:conf/cidr/IdreosAJA11}.
+In addition, adaptive indexing ideas have been used to design new generation data exploration tools such as 
+touch-based data systems \cite{DBLP:conf/cidr/IdreosL13, DBLP:conf/icde/LiarouI14}.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Database Systems for the Multi-core Era}
+\label{sec:multicore_systems}
+
+Modern hardware offers opportunities for high parallelism;
+%even
+a single machine may be equipped with chip multiprocessors, which contain multiple cores with support for multiple context threads.
+Recent research focuses on exploiting parallelism opportunities by a) processing multiple queries concurrently, 
+and b) by 
+%trying to 
+parallelizing 
+%every 
+tasks in the critical path during query processing
+\cite{mc1,DBLP:conf/cidr/HarizopoulosA03,DBLP:conf/sigmod/HarizopoulosSA05,mc2}.
+Sorting is one of the most important database tasks (and a core component of adaptive indexing in column-stores) that can be highly-parallelized using modern hardware advances \cite{hash_join_rev, hash_sort_SIMD, Polychroniou:2014:CSM:2588555.2610522, database_SIMD}.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{The MonetDB System}
+\label{sec:monetdb}
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Summary}
+\label{sec:summaryRelated}
+

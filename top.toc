@@ -1,0 +1,41 @@
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.2}
+\contentsline {chapter}{\numberline {2}Related Work and Background}{11}{chapter.3}
+\contentsline {section}{\numberline {2.1}Row-oriented Storage and Data Access}{11}{section.4}
+\contentsline {section}{\numberline {2.2}Column-stores}{11}{section.5}
+\contentsline {section}{\numberline {2.3}Indices}{11}{section.6}
+\contentsline {section}{\numberline {2.4}Offline Indexing}{11}{section.7}
+\contentsline {section}{\numberline {2.5}Online Indexing}{12}{section.8}
+\contentsline {section}{\numberline {2.6}Adaptive Indexing}{12}{section.9}
+\contentsline {section}{\numberline {2.7}Database Systems for the Multi-core Era}{13}{section.10}
+\contentsline {section}{\numberline {2.8}The MonetDB System}{13}{section.11}
+\contentsline {section}{\numberline {2.9}Summary}{13}{section.12}
+\contentsline {chapter}{\numberline {3}Database Cracking: Fancy Scan, not Poor Man's Sort!}{14}{chapter.13}
+\contentsline {section}{\numberline {3.1}Introduction}{14}{section.14}
+\contentsline {section}{\numberline {3.2}Background \& Related Work}{16}{section.17}
+\contentsline {section}{\numberline {3.3}Classic Cracking}{18}{section.22}
+\contentsline {section}{\numberline {3.4}CPU Efficient Cracking}{20}{section.33}
+\contentsline {section}{\numberline {3.5}Parallelization}{22}{section.45}
+\contentsline {section}{\numberline {3.6}Evaluation}{24}{section.51}
+\contentsline {section}{\numberline {3.7}Summary}{26}{section.75}
+\contentsline {chapter}{\numberline {4}Holistic Indexing in Main-memory Column-stores}{34}{chapter.76}
+\contentsline {section}{\numberline {4.1}Introduction}{35}{section.77}
+\contentsline {section}{\numberline {4.2}Holistic Indexing}{37}{section.79}
+\contentsline {subsection}{\numberline {4.2.1}Preliminary Definitions}{38}{subsection.80}
+\contentsline {subsection}{\numberline {4.2.2}System Design}{39}{subsection.82}
+\contentsline {section}{\numberline {4.3}Experimental Analysis}{45}{section.92}
+\contentsline {subsection}{\numberline {4.3.1}Improving over State-of-the-Art Indexing}{45}{subsection.93}
+\contentsline {subsection}{\numberline {4.3.2}Holistic Vs. Multi-core Adaptive Indexing}{49}{subsection.104}
+\contentsline {subsection}{\numberline {4.3.3}Robustness}{52}{subsection.111}
+\contentsline {subsection}{\numberline {4.3.4}More Benefits with Complex Schemas}{53}{subsection.116}
+\contentsline {subsection}{\numberline {4.3.5}Design Decisions}{55}{subsection.118}
+\contentsline {subsection}{\numberline {4.3.6}TPC-H}{55}{subsection.119}
+\contentsline {subsection}{\numberline {4.3.7}Updates}{56}{subsection.120}
+\contentsline {subsection}{\numberline {4.3.8}Varying Number of Clients}{56}{subsection.122}
+\contentsline {chapter}{Bibliography}{57}{figure.caption.123}
+\contentsline {chapter}{List of Figures}{64}{dummy.125}
+\contentsline {chapter}{List of Tables}{65}{dummy.127}
+\contentsline {chapter}{Abbreviations}{66}{dummy.129}
+\contentsline {chapter}{Summary}{67}{table.131}
+\contentsline {chapter}{Samenvatting}{68}{chapter*.132}
+\contentsline {chapter}{Acknowledgements}{69}{chapter*.133}
+\contentsline {chapter}{SIKS Dissertation Series}{70}{chapter*.134}

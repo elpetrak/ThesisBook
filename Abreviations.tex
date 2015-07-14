@@ -1,0 +1,62 @@
+
+\newcommand{\dbms}[1]{\ifx\dbmsHasAlreadyBeenExpandedOnce\undefined{}Database Management System#1 (DBMS#1)\def\dbmsHasAlreadyBeenExpandedOnce{yes}\else{DBMS#1}\fi}
+
+\newcommand{\rle}[1]{\ifx\rleHasAlreadyBeenExpandedOnce\undefined{}Run-Length Encoding#1 (RLE#1)\def\rleHasAlreadyBeenExpandedOnce{yes}\else{RLE#1}\fi}
+
+
+\newcommand{\bat}[1]{\ifx\batHasAlreadyBeenExpandedOnce\undefined{}Binary Association Table#1 (BAT#1)\def\batHasAlreadyBeenExpandedOnce{yes}\else{BAT#1}\fi}
+
+\newcommand{\mmdbms}[1]{\ifx\mmdbmsHasAlreadyBeenExpandedOnce\undefined{}Memory-Resident DBMS{#1} (MRDBMS{#1})\def\mmdbmsHasAlreadyBeenExpandedOnce{yes}\else{MRDBMS#1}\fi}
+
+\newcommand{\gpu}[1]{\ifx\gpuHasAlreadyBeenExpandedOnce\undefined{}Graphics Processing Unit#1 (GPU#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\else{GPU#1}\fi}
+
+\newcommand{\cpu}[1]{CPU#1}
+
+\newcommand{\simt}[1]{\ifx\simtHasAlreadyBeenExpandedOnce\undefined{}\emph{Single Instruction Multiple Threads}#1 (SIMT#1)\def\simtHasAlreadyBeenExpandedOnce{yes}\else{SIMT#1}\fi}
+
+\newcommand{\simd}[1]{\ifx\simdHasAlreadyBeenExpandedOnce\undefined{}\emph{Single Instruction Multiple Data}#1 (SIMD#1)\def\simdHasAlreadyBeenExpandedOnce{yes}\else{SIMD#1}\fi}
+
+% \newcommand{\gpgpu}[1]{\ifx\gpgpuHasAlreadyBeenExpandedOnce\undefined{}General Purpose Graphics Processing Unit#1 (GPGPU#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\gpgpuHasAlreadyBeenExpandedOnce{yes}\else{GPGPU#1}\fi}
+
+\newcommand{\gpgpu}[1]{\gpu{#1}}
+
+\newcommand{\ar}[1]{\ifx\arHasAlreadyBeenExpandedOnce\undefined{}Approximate \& Refine#1 (A\&R#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\arHasAlreadyBeenExpandedOnce{yes}\else{A\&R#1}\fi}
+
+
+\newcommand{\bwd}[1]{\ifx\bwdHasAlreadyBeenExpandedOnce\undefined{}Bitwise Decomposition \& Distribution#1 (BWD#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\bwdHasAlreadyBeenExpandedOnce{yes}\else{BWD#1}\fi}
+
+
+\newcommand{\lru}[1]{\ifx\lruHasAlreadyBeenExpandedOnce\undefined{}Least Recently Used#1 (LRU#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\lruHasAlreadyBeenExpandedOnce{yes}\else{LRU#1}\fi}
+
+
+
+\newcommand{\opencl}[1]{OpenCL#1}
+
+\newcommand{\mal}[1]{\ifx\malHasAlreadyBeenExpandedOnce\undefined{}MonetDB Assembly Language#1 (MAL#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\malHasAlreadyBeenExpandedOnce{yes}\else{MAL#1}\fi}
+
+\newcommand{\jit}[1]{\ifx\jitHasAlreadyBeenExpandedOnce\undefined{}Just-in-Time#1 (JiT#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\jitHasAlreadyBeenExpandedOnce{yes}\else{JiT#1}\fi}
+
+\newcommand{\ssd}[1]{\ifx\ssdHasAlreadyBeenExpandedOnce\undefined{}Solid State Disk#1 (SSD#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\ssdHasAlreadyBeenExpandedOnce{yes}\else{SSD#1}\fi}
+
+\newcommand{\fofr}[1]{\ifx\fofrHasAlreadyBeenExpandedOnce\undefined{}Frame of Reference#1 (FOR#1)\def\gpuHasAlreadyBeenExpandedOnce{yes}\def\fofrHasAlreadyBeenExpandedOnce{yes}\else{FOR#1}\fi}
+
+\newcommand{\bwdm}[1]{\ifx\bwdmHasAlreadyBeenExpandedOnce\undefined{}Bitwise Decomposed Storage Model#1 (BWDM#1)\def\bwdmHasAlreadyBeenExpandedOnce{yes}\else{BWDM#1}\fi}
+
+
+
+\newcommand{\thetafunction}[1]{\mbox{$\theta$-function#1}}
+\newcommand{\thetajoin}[1]{\mbox{$\theta$-join#1}}
+\newcommand{\thetajoins}[1]{\mbox{$\theta$-joins}}
+\newcommand{\Thetajoins}[1]{\mbox{$\Theta$-joins}}
+\newcommand{\base}[1]{#1^b}
+\newcommand{\approximation}[1]{#1^a}
+\newcommand{\residual}[1]{#1^r}
+\newcommand{\anycomponent}[1]{#1^x}
+\newcommand{\lbits}[0]{.\rvert\!\lceil{}}
+\newcommand{\rbits}[0]{.\rceil{}\!\lvert}
+\newcommand{\bits}[1]{\left\lbits{}#1\right\rbits{}}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "Pacemaker"
+%%% End: 

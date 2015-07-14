@@ -1,0 +1,402 @@
+\begin{thebibliography}{59}
+
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agrawal et~al.(2004)Agrawal, Chaudhuri, Koll{\'a}r, Marathe,
+  Narasayya, and Syamala]{DBLP:conf/vldb/AgrawalCKMNS04}
+Sanjay Agrawal, Surajit Chaudhuri, Lubor Koll{\'a}r, Arunprasad~P. Marathe,
+  Vivek~R. Narasayya, and Manoj Syamala.
+\newblock {Database Tuning Advisor for Microsoft SQL Server 2005}.
+\newblock In \emph{Proceedings of the 30th International Conference on Very
+  Large Data Bases (VLDB)}, pages 1110--1121, 2004.
+
+\bibitem[Dageville et~al.(2004)Dageville, Das, Dias, Yagoub, Za\"{\i}t, and
+  Ziauddin]{DBLP:conf/vldb/DagevilleDDYZZ04}
+Beno\^{\i}t Dageville, Dinesh Das, Karl Dias, Khaled Yagoub, Mohamed Za\"{\i}t,
+  and Mohamed Ziauddin.
+\newblock {Automatic SQL Tuning in Oracle 10g}.
+\newblock In \emph{Proceedings of the 30th International Conference on Very
+  Large Data Bases (VLDB)}, pages 1098--1109, 2004.
+
+\bibitem[Zilio et~al.(2004)Zilio, Rao, Lightstone, Lohman, Storm,
+  Garcia-Arellano, and Fadden]{DBLP:conf/vldb/ZilioRLLSGF04}
+Daniel~C. Zilio, Jun Rao, Sam Lightstone, Guy~M. Lohman, Adam~J. Storm,
+  Christian Garcia-Arellano, and Scott Fadden.
+\newblock {DB2 Design Advisor: Integrated Automatic Physical Database Design}.
+\newblock In \emph{Proceedings of the 30th International Conference on Very
+  Large Data Bases (VLDB)}, pages 1087--1097, 2004.
+
+\bibitem[Chaudhuri and Narasayya(1998)]{DBLP:conf/sigmod/ChaudhuriN98}
+Surajit Chaudhuri and Vivek~R. Narasayya.
+\newblock {AutoAdmin ``What-if'' Index Analysis Utility}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 367--378, 1998.
+
+\bibitem[Chaudhuri and Narasayya(1997)]{DBLP:conf/vldb/ChaudhuriN97}
+Surajit Chaudhuri and Vivek~R. Narasayya.
+\newblock {An Efficient Cost-Driven Index Selection Tool for Microsoft SQL
+  Server}.
+\newblock In \emph{Proceedings of the 23rd International Conference on Very
+  Large Data Bases (VLDB)}, pages 146--155, 1997.
+
+\bibitem[Schnaitter et~al.(2006)Schnaitter, Abiteboul, Milo, and
+  Polyzotis]{DBLP:conf/sigmod/SchnaitterAMP06}
+Karl Schnaitter, Serge Abiteboul, Tova Milo, and Neoklis Polyzotis.
+\newblock {COLT: Continuous On-Line Tuning}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 793--795, 2006.
+
+\bibitem[Bruno and Chaudhuri(2007)]{DBLP:conf/icde/BrunoC07}
+Nicolas Bruno and Surajit Chaudhuri.
+\newblock {An Online Approach to Physical Design Tuning}.
+\newblock In \emph{Proceedings of the IEEE 23rd International Conference on
+  Data Engineering (ICDE)}, pages 826--835, 2007.
+
+\bibitem[L{\"u}hring et~al.(2007)L{\"u}hring, Sattler, Schmidt, and
+  Schallehn]{DBLP:conf/icde/LuhringSSS07}
+Martin L{\"u}hring, Kai-Uwe Sattler, Karsten Schmidt, and Eike Schallehn.
+\newblock {Autonomous Management of Soft Indexes}.
+\newblock In \emph{Proceedings of the 2nd International Workshop on
+  Self-Managing Data Bases (SMDB)}, pages 450--458, 2007.
+
+\bibitem[Idreos et~al.(2007{\natexlab{a}})Idreos, Kersten, and
+  Manegold]{DBLP:conf/cidr/IdreosKM07}
+Stratos Idreos, Martin~L. Kersten, and Stefan Manegold.
+\newblock {Database Cracking}.
+\newblock In \emph{Proceedings of the 3rd Biennial Conference on Innovative
+  Data Systems Research (CIDR)}, pages 68--78, 2007{\natexlab{a}}.
+
+\bibitem[Schuhknecht et~al.(2013)Schuhknecht, Jindal, and
+  Dittrich]{CrackRepeat}
+Felix~Martin Schuhknecht, Alekh Jindal, and Jens Dittrich.
+\newblock {The Uncracked Pieces in Database Cracking}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  7\penalty0 (2):\penalty0 97--108, 2013.
+
+\bibitem[Richter et~al.(2013)Richter, Quiané-Ruiz, Schuh, and Dittrich]{Hail}
+Stefan Richter, Jorge-Arnulfo Quiané-Ruiz, Stefan Schuh, and Jens Dittrich.
+\newblock {Towards Zero-Overhead Static and Adaptive Indexing in Hadoop}.
+\newblock \emph{The Very Large Data Bases Journal (VLDB J.)}, 23\penalty0
+  (3):\penalty0 469--494, 2013.
+
+\bibitem[Graefe and Kuno(2010{\natexlab{a}})]{DBLP:conf/edbt/GraefeK10}
+Goetz Graefe and Harumi~A. Kuno.
+\newblock {Self-Selecting, Self-Tuning, Incrementally Optimized Indexes}.
+\newblock In \emph{Proceedings of the 13th International Conference on
+  Extending Database Technology (EDBT)}, pages 371--381, 2010{\natexlab{a}}.
+
+\bibitem[Idreos et~al.(2007{\natexlab{b}})Idreos, Kersten, and
+  Manegold]{DBLP:conf/sigmod/IdreosKM07}
+Stratos Idreos, Martin~L. Kersten, and Stefan Manegold.
+\newblock {Updating a Cracked Database}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 413--424, 2007{\natexlab{b}}.
+
+\bibitem[Idreos et~al.(2009)Idreos, Kersten, and
+  Manegold]{DBLP:conf/sigmod/IdreosKM09}
+Stratos Idreos, Martin~L. Kersten, and Stefan Manegold.
+\newblock {Self-Organizing Tuple Reconstruction in Column-Stores}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 297--308, 2009.
+
+\bibitem[Alvarez et~al.(2014)Alvarez, Schuhknecht, Dittrich, and
+  Richter]{multicore_adaptive}
+Victor Alvarez, Felix~Martin Schuhknecht, Jens Dittrich, and Stefan Richter.
+\newblock {Main Memory Adaptive Indexing for Multi-core Systems}.
+\newblock In \emph{Proceedings of the 10th International Workshop on Data
+  Management on New Hardware (DaMoN)}, 2014.
+
+\bibitem[Graefe et~al.(2012)Graefe, Halim, Idreos, Kuno, and
+  Manegold]{DBLP:journals/pvldb/GraefeHIKM12}
+Goetz Graefe, Felix Halim, Stratos Idreos, Harumi~A. Kuno, and Stefan Manegold.
+\newblock {Concurrency Control for Adaptive Indexing}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  5\penalty0 (7):\penalty0 656--667, 2012.
+
+\bibitem[Graefe et~al.(2014)Graefe, Halim, Idreos, Kuno, Manegold, and
+  Seeger]{DBLP:journals/vldb/GraefeHIKMS14}
+Goetz Graefe, Felix Halim, Stratos Idreos, Harumi~A. Kuno, Stefan Manegold, and
+  Bernhard Seeger.
+\newblock {Transactional Support for Adaptive Indexing}.
+\newblock \emph{The Very Large Data Bases Journal (VLDB J.)}, 23\penalty0
+  (2):\penalty0 303--328, 2014.
+
+\bibitem[Idreos et~al.(2011{\natexlab{a}})Idreos, Manegold, Kuno, and
+  Graefe]{DBLP:journals/pvldb/IdreosMKG11}
+Stratos Idreos, Stefan Manegold, Harumi~A. Kuno, and Goetz Graefe.
+\newblock {Merging What's Cracked, Cracking What's Merged: Adaptive Indexing in
+  Main-Memory Column-Stores}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  4\penalty0 (9):\penalty0 585--597, 2011{\natexlab{a}}.
+
+\bibitem[Graefe et~al.(2010)Graefe, Idreos, Kuno, and
+  Manegold]{DBLP:conf/tpctc/GraefeIKM10}
+Goetz Graefe, Stratos Idreos, Harumi~A. Kuno, and Stefan Manegold.
+\newblock {Benchmarking Adaptive Indexing}.
+\newblock In \emph{Proceedings of the 2nd Technology Conference on Performance
+  Evaluation and Benchmarking (TPCTC)}, pages 169--184, 2010.
+
+\bibitem[Halim et~al.(2012)Halim, Idreos, Karras, and
+  Yap]{DBLP:journals/pvldb/HalimIKY12}
+Felix Halim, Stratos Idreos, Panagiotis Karras, and Roland H.~C. Yap.
+\newblock {Stochastic Database Cracking: Towards Robust Adaptive Indexing in
+  Main-Memory Column-Stores}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  5\penalty0 (6):\penalty0 502--513, 2012.
+
+\bibitem[Graefe and Kuno(2010{\natexlab{b}})]{IndexingKeys}
+Goetz Graefe and Harumi Kuno.
+\newblock {Adaptive Indexing for Relational Keys}.
+\newblock In \emph{Workshops Proceedings of the IEEE 26th International
+  Conference on Data Engineering (ICDE)}, pages 69--74, 2010{\natexlab{b}}.
+
+\bibitem[Pirk et~al.(2014)Pirk, Petraki, Idreos, Manegold, and
+  Kersten]{efficient_cracking}
+Holger Pirk, Eleni Petraki, Stratos Idreos, Stefan Manegold, and Martin~L.
+  Kersten.
+\newblock {Database Cracking: Fancy Scan, not Poor Man{\textquoteright}s Sort!}
+\newblock In \emph{Proceedings of the 10th International Workshop on Data
+  Management on New Hardware (DaMoN)}, 2014.
+
+\bibitem[Zoumpatianos et~al.(2014)Zoumpatianos, Idreos, and
+  Palpanas]{DBLP:conf/sigmod/ZoumpatianosIP14}
+Kostas Zoumpatianos, Stratos Idreos, and Themis Palpanas.
+\newblock {Indexing for Interactive Exploration of Big Data Series}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 1555--1566, 2014.
+
+\bibitem[Alagiannis et~al.(2014)Alagiannis, Idreos, and
+  Ailamaki]{Alagiannis:2014:HHA:2588555.2610502}
+Ioannis Alagiannis, Stratos Idreos, and Anastasia Ailamaki.
+\newblock {H2O: A Hands-free Adaptive Store}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 1103--1114, 2014.
+
+\bibitem[Idreos et~al.(2011{\natexlab{b}})Idreos, Alagiannis, Johnson, and
+  Ailamaki]{DBLP:conf/cidr/IdreosAJA11}
+Stratos Idreos, Ioannis Alagiannis, Ryan Johnson, and Anastasia Ailamaki.
+\newblock {Here are my Data Files. Here are my Queries. Where are my Results?}
+\newblock In \emph{Proceedings of the 5th Biennial Conference on Innovative
+  Data Systems Research (CIDR)}, pages 57--68, 2011{\natexlab{b}}.
+
+\bibitem[Idreos and Liarou(2013)]{DBLP:conf/cidr/IdreosL13}
+Stratos Idreos and Erietta Liarou.
+\newblock {dbTouch: Analytics at your Fingertips}.
+\newblock In \emph{Proceedings of the 6th Biennial Conference on Innovative
+  Data Systems Research (CIDR)}, 2013.
+
+\bibitem[Liarou and Idreos(2014)]{DBLP:conf/icde/LiarouI14}
+Erietta Liarou and Stratos Idreos.
+\newblock {dbTouch in Action Database Kernels for Touch-based Data
+  Exploration}.
+\newblock In \emph{Proceedings of the IEEE 30th International Conference on
+  Data Engineering (ICDE)}, pages 1262--1265, 2014.
+
+\bibitem[Hardavellas et~al.(2010)Hardavellas, Ferdman, Falsafi, and
+  Ailamaki]{mc1}
+Nikos Hardavellas, Michael Ferdman, Babak Falsafi, and Anastasia Ailamaki.
+\newblock {Near-Optimal Cache Block Placement with Reactive Nonuniform Cache
+  Architectures}.
+\newblock In \emph{IEEE Micro}, page~29, 2010.
+
+\bibitem[Harizopoulos and Ailamaki(2003)]{DBLP:conf/cidr/HarizopoulosA03}
+Stavros Harizopoulos and Anastassia Ailamaki.
+\newblock {A Case for Staged Database Systems}.
+\newblock In \emph{Proceedings of the Conference on Innovative Data Systems
+  Research (CIDR)}, 2003.
+
+\bibitem[Harizopoulos et~al.(2005)Harizopoulos, Shkapenyuk, and
+  Ailamaki]{DBLP:conf/sigmod/HarizopoulosSA05}
+Stavros Harizopoulos, Vladislav Shkapenyuk, and Anastassia Ailamaki.
+\newblock {QPipe: A Simultaneously Pipelined Relational Query Engine}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 383--394, 2005.
+
+\bibitem[Johnson et~al.(2009)Johnson, Pandis, Hardavellas, Ailamaki, and
+  Falsafi]{mc2}
+Ryan Johnson, Ippokratis Pandis, Nikos Hardavellas, Anastasia Ailamaki, and
+  Babak Falsafi.
+\newblock {Shore-MT: A Scalable Storage Manager for the Multicore Era}.
+\newblock In \emph{Proceedings of the 12th International Conference on
+  Extending Database Technology (EDBT)}, pages 24--35, 2009.
+
+\bibitem[Balkesen et~al.(2013)Balkesen, Alonso, Teubner, and
+  {\"O}zsu]{hash_join_rev}
+Cagri Balkesen, Gustavo Alonso, Jens Teubner, and M.~Tamer {\"O}zsu.
+\newblock {Multi-Core, Main-Memory Joins: Sort vs. Hash Revisited}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  7\penalty0 (1):\penalty0 85--96, 2013.
+
+\bibitem[Kim et~al.(2009)Kim, Sedlar, Chhugani, Kaldewey, Nguyen, Blas, Lee,
+  Satish, and Dubey]{hash_sort_SIMD}
+Changkyu Kim, Eric Sedlar, Jatin Chhugani, Tim Kaldewey, Anthony~D. Nguyen,
+  Andrea~Di Blas, Victor~W. Lee, Nadathur Satish, and Pradeep Dubey.
+\newblock {Sort vs. Hash Revisited: Fast Join Implementation on Modern
+  Multi-Core CPUs}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  2\penalty0 (2):\penalty0 1378--1389, 2009.
+
+\bibitem[Polychroniou and Ross(2014)]{Polychroniou:2014:CSM:2588555.2610522}
+Orestis Polychroniou and Kenneth~A. Ross.
+\newblock {A Comprehensive Study of Main-memory Partitioning and Its
+  Application to Large-scale Comparison- and Radix-sort}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 755--766, 2014.
+
+\bibitem[Zhou and Ross(2002)]{database_SIMD}
+Jingren Zhou and Kenneth~A. Ross.
+\newblock {Implementing Database Operations Using SIMD Instructions}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 145--156, 2002.
+
+\bibitem[Chhugani et~al.(2008)Chhugani, Nguyen, Lee, Macy, Hagog, Chen,
+  Baransi, Kumar, and Dubey]{sorting_SIMD}
+Jatin Chhugani, Anthony~D. Nguyen, Victor~W. Lee, William Macy, Mostafa Hagog,
+  Yen-Kuang Chen, Akram Baransi, Sanjeev Kumar, and Pradeep Dubey.
+\newblock {Efficient Implementation of Sorting on Multi-Core SIMD CPU
+  Architecture}.
+\newblock In \emph{PVLDB}, 2008.
+
+\bibitem[Johnson(1991)]{DBLP:books/daglib/0068852}
+Mike Johnson.
+\newblock \emph{{Superscalar Microprocessor Design}}.
+\newblock Prentice Hall, 1991.
+
+\bibitem[Hennessy and Patterson(2012)]{DBLP:books/daglib/0028244}
+John~L. Hennessy and David~A. Patterson.
+\newblock \emph{{Computer Architecture - A Quantitative Approach (5. ed.)}}.
+\newblock Morgan Kaufmann, 2012.
+
+\bibitem[Ailamaki et~al.(1999)Ailamaki, DeWitt, Hill, and Wood]{wheretime}
+Anastassia Ailamaki, David~J. DeWitt, Mark~D. Hill, and David~A. Wood.
+\newblock {DBMSs on a Modern Processor: Where Does Time Go?}
+\newblock In \emph{VLDB}, 1999.
+
+\bibitem[Boncz et~al.(2005)Boncz, Zukowski, and Nes]{DBLP:conf/cidr/BonczZN05}
+Peter~A. Boncz, Marcin Zukowski, and Niels Nes.
+\newblock {MonetDB/X100: Hyper-Pipelining Query Execution}.
+\newblock In \emph{CIDR}, 2005.
+
+\bibitem[Cieslewicz and Ross(2007)]{aggr_tlp}
+John Cieslewicz and Kenneth~A. Ross.
+\newblock {Adaptive Aggregation on Chip Multiprocessors}.
+\newblock In \emph{VLDB}, 2007.
+
+\bibitem[Hoare(1961)]{quicksort}
+C.~A.~R. Hoare.
+\newblock Algorithm 64: Quicksort.
+\newblock \emph{Commun. ACM}, 4\penalty0 (7), 1961.
+
+\bibitem[int(June, 2013)]{intelOptimizationManual}
+\emph{Intel 64 and IA-32 Architectures Optimization Reference Manual}.
+\newblock Appendix B: Using Performance Monitoring Events. Intel Corporation,
+  June, 2013.
+
+\bibitem[Ross(2004)]{ross2004selection}
+Kenneth~A Ross.
+\newblock {Selection Conditions in Main Memory}.
+\newblock In \emph{ACM Transactions on Database Systems (TODS)}, 2004.
+
+\bibitem[Jagadish et~al.(2007)Jagadish, Chapman, Elkiss, Jayapandian, Li,
+  Nandi, and Yu]{UsableDatabases}
+H.~V. Jagadish, Adriane Chapman, Aaron Elkiss, Magesh Jayapandian, Yunyao Li,
+  Arnab Nandi, and Cong Yu.
+\newblock {Making Database Systems Usable}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 13--24, 2007.
+
+\bibitem[Kersten et~al.(2011)Kersten, Idreos, Manegold, and
+  Liarou]{exploration}
+Martin~L. Kersten, Stratos Idreos, Stefan Manegold, and Erietta Liarou.
+\newblock {The Researcher's Guide to the Data Deluge: Querying a Scientific
+  Database in Just a Few Seconds}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  4\penalty0 (12):\penalty0 1474--1477, 2011.
+
+\bibitem[Khurana and Deshpande(2013)]{hinge}
+Udayan Khurana and Amol Deshpande.
+\newblock {HiNGE: Enabling Temporal Network Analytics at Scale}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 1089--1092, 2013.
+
+\bibitem[Kumar et~al.(2013)Kumar, Niu, and R{\'e}]{hazy}
+Arun Kumar, Feng Niu, and Christopher R{\'e}.
+\newblock {Hazy: Making it Easier to Build and Maintain Big-Data Analytics}.
+\newblock \emph{Communications of the ACM}, 56\penalty0 (3):\penalty0 40--49,
+  2013.
+
+\bibitem[Laptev et~al.(2013)Laptev, Zeng, and Zaniolo]{earl}
+Nikolay Laptev, Kai Zeng, and Carlo Zaniolo.
+\newblock {Very Fast Estimation for Result and Accuracy of Big Data Analytics:
+  The EARL System}.
+\newblock In \emph{Proceedings of the IEEE 29th International Conference on
+  Data Engineering (ICDE)}, pages 1296--1299, 2013.
+
+\bibitem[Dittrich et~al.(2010)Dittrich, Quian{\'e}-Ruiz, Jindal, Kargin, Setty,
+  and Schad]{hadoop+}
+Jens Dittrich, Jorge-Arnulfo Quian{\'e}-Ruiz, Alekh Jindal, Yagiz Kargin, Vinay
+  Setty, and J{\"o}rg Schad.
+\newblock {Hadoop++: Making a Yellow Elephant Run Like a Cheetah (Without It
+  Even Noticing)}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  3\penalty0 (1):\penalty0 518--529, 2010.
+
+\bibitem[Alagiannis et~al.(2012)Alagiannis, Borovica, Branco, Idreos, and
+  Ailamaki]{nodb}
+Ioannis Alagiannis, Renata Borovica, Miguel Branco, Stratos Idreos, and
+  Anastasia Ailamaki.
+\newblock {NoDB: Efficient Query Execution on Raw Data Files}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 241--252, 2012.
+
+\bibitem[Kallman et~al.(2008)Kallman, Kimura, Natkins, Pavlo, Rasin, Zdonik,
+  Jones, Madden, Stonebraker, Zhang, Hugg, and Abadi]{hstore}
+Robert Kallman, Hideaki Kimura, Jonathan Natkins, Andrew Pavlo, Alex Rasin,
+  Stanley~B. Zdonik, Evan P.~C. Jones, Samuel Madden, Michael Stonebraker, Yang
+  Zhang, John Hugg, and Daniel~J. Abadi.
+\newblock {H-store: A High-Performance, Distributed Main Memory Transaction
+  Processing System}.
+\newblock \emph{Proceedings of the Very Large Data Bases Endowment (PVLDB)},
+  1\penalty0 (2):\penalty0 1496--1499, 2008.
+
+\bibitem[Kemper and Neumann(2011)]{hyper}
+Alfons Kemper and Thomas Neumann.
+\newblock {HyPer: A Hybrid OLTP{\&}OLAP Main Memory Database System Based on
+  Virtual Memory Snapshots}.
+\newblock In \emph{Proceedings of the IEEE 27th International Conference on
+  Data Engineering (ICDE)}, pages 195--206, 2011.
+
+\bibitem[Li and Patel(2013)]{bitweaving}
+Yinan Li and Jignesh~M. Patel.
+\newblock {BitWeaving: Fast Scans for Main Memory Data Processing}.
+\newblock In \emph{Proceedings of the ACM SIGMOD International Conference on
+  Management of Data}, pages 289--300, 2013.
+
+\bibitem[Idreos et~al.(2012)Idreos, Groffen, Nes, Manegold, Mullender, and
+  Kersten]{DBLP:journals/debu/IdreosGNMMK12}
+Stratos Idreos, Fabian Groffen, Niels Nes, Stefan Manegold, K.~Sjoerd
+  Mullender, and Martin~L. Kersten.
+\newblock {MonetDB: Two Decades of Research in Column-oriented Database
+  Architectures}.
+\newblock \emph{IEEE Data Engineering Bulletin}, 35\penalty0 (1):\penalty0
+  40--45, 2012.
+
+\bibitem[ZZZ()]{monetdb}
+ZZZ.
+\newblock \emph{MonetDB}.
+\newblock \url{www.monetdb.org}.
+
+\bibitem[pso()]{psort_site}
+Sort-Merge Joins. http://www.systems.ethz.ch/projects/paralleljoins.
+
+\bibitem[Sky()]{SkyServer}
+Sloan Digital Sky Survey (SkyServer). http://cas.sdss.org/.
+
+\bibitem[tpc()]{tpch}
+TPC Benchmark H. http://www.tpc.org/tpch/.
+
+\end{thebibliography}

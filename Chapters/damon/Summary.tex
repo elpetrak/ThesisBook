@@ -1,0 +1,14 @@
+\section{Summary}
+\label{subsec:damon_conclusion}
+\emph{CPU-efficient implementation of even simple algorithms is hard}:
+while common knowledge in many fields of computer science, this
+insight is still not properly appreciated in the field of data
+management. In this paper, we conducted an in-depth study of such a
+supposedly simple algorithm: pivoted partitioning. We demonstrated
+that, in its na\"ive implementation, it is not an I/O bound
+algorithm. Starting from this understanding, we systematically
+analyzed and addressed the dominant cost factors using
+state-of-the-art techniques. The result is in an implementation that
+rivals and sometimes even outperforms a parallelized scan on a variety of
+systems. In that, it is up to 25 times faster than the initial
+
