@@ -1,0 +1,352 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.43 (17/5/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
+
+\graphicspath{{Figures/}} % Specifies the directory where pictures are stored
+
+\usepackage{algorithm}
+\usepackage[]{algorithmic}
+\usepackage{subfig}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{Missing_Packages/multiFloats}
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage[flushleft]{threeparttable}
+\usepackage{url}
+\usepackage{color}
+%\usepackage{pslatex}
+%\usepackage{natbib}
+\usepackage{paralist}
+\usepackage{comment}
+\usepackage{tablefootnote}
+%\usepackage{flushend}
+%\renewcommand{\algorithmiccomment}[1]{// #1}
+%\renewcommand{\bibfont}{\small}
+%\renewcommand{\bibsep}{0.05cm}
+\input{abreviations}
+
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\begin{document}
+
+%\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+%\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\setcounter{page}{1}
+\thispagestyle{empty}
+%\begin{titlepage}
+\begin{center}
+
+%\textsc{\LARGE \univname}\\[1.5cm] % University name
+%\textsc{\Large Doctoral Thesis}\\[0.5cm] % Thesis type
+%\HRule \\[0.4cm] % Horizontal line
+\vspace*{5cm}
+{\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
+%\HRule \\[1.5cm] % Horizontal line
+
+%\begin{minipage}{0.4\textwidth}
+\textsc{\authornames}
+%\end{minipage}\\[3cm]
+
+%{\large \today}\\[4cm] % Date
+\vfill
+
+\end{center}
+%\end{titlepage}
+
+%-----------------------------------------------------------------------------
+% 2nd page is empty
+%-----------------------------------------------------------------------------
+\clearpage
+\pagestyle{fancy}
+\null
+\newpage
+
+%-----------------------------------------------------------------------------
+% 3rd page: title + default dutch text
+%-----------------------------------------------------------------------------
+\pagestyle{fancy}
+\begin{center}
+
+%%%\begin{center}
+\vspace*{3cm}
+{\huge\bf Holistic Indexing}\\
+%\vspace*{0.5cm}
+%{\huge\bf Column-Stores}\\
+%%%\end{center}
+
+\vspace*{3cm}
+
+{\sc Academisch Proefschrift}
+
+\vspace{1cm}
+ter verkrijging van de graad van doctor\\
+aan de Universiteit van Amsterdam,\\
+op gezag van de Rector Magnificus\\
+prof. ... \\
+ten overstaan van een door het\\ 
+college voor promoties ingestelde commissie\\
+in het openbaar te verdedigen\\
+in ... \\
+op ...
+
+\vspace*{3cm}
+
+door\\
+Eleni Petraki\\
+geboren te Karditsa, Griekenland\\
+\end{center}
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	Promotiecommissie
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy}
+\noindent
+\begin{tabular}{ll}
+\textbf{Promotiecommissie}  & \\
+	   & \\
+Promotor:  & Prof. dr. M.L. Kersten\\
+           & \\
+Copromotor:& Prof. dr. S. Manegold\\
+	   & Asst. Prof. dr. S. Idreos\\
+           & \\
+Overige Leden: & Prof. dr. ... \\
+           & Prof. dr. ... \\
+           & Prof. dr. ... \\
+           & Prof. dr. ... \\
+           & Prof. dr. ... \\
+\end{tabular}
+\\
+\\
+\\
+\noindent
+Faculteit der Natuurwetenschapen, Wiskunde en Informatica
+\clearpage 
+
+%----------------------------------------------------------------------------------------
+%	CWI, MonetDB, SIKS
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy} % No headers or footers for the following pages
+
+\includegraphics[width=1.7cm]{Figures/CWIlogo}
+\\
+\\
+{The research reported in this thesis has been partially carried out at CWI,
+the Dutch National Research Laboratory for Mathematics 
+and Computer Science, within the theme Database Architectures and Information Access, 
+a subdivision of the research cluster Information Systems.}
+\\
+\\
+\\
+\includegraphics[width=1.7cm]{Figures/monetdb_logo}
+\\
+\\
+{The research reported in this thesis has been partially carried out as part of the continuous research and development of the MonetDB
+open-source database management system.}
+\\
+\\
+\\
+\includegraphics[width=1.7cm]{Figures/siks_logo.eps}
+\\
+\\
+{SIKS Dissertation Series No-nnnn-nn.\\
+The research reported in this thesis has been carried out under the auspices 
+of SIKS, the Dutch Research School for Information and Knowledge Systems.}
+\\
+\\
+\\
+ISBN nn nnnn nnn n
+\clearpage 
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % Page style needs to be empty for this page
+%\setstretch{1.3} % Return the line spacing back to 1.3
+%\dedicatory{For/Dedicated to/To my\ldots} % Dedication text
+\dedicatory{Dedicated to my parents, Sofia and Theodoros,\newline
+	   and my husband, Evangelos.} % Dedication text
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % No headers or footers for the following pages
+
+\null\vfill % Add some space to move the quote down the page a bit
+
+\textit{``The time will come when diligent research over long periods will bring to light things which now lie hidden. A single lifetime, even though entirely devoted to the sky, would not be enough for the investigation of so vast a subject... And so this knowledge will be unfolded only through long successive ages. There will come a time when our descendants will be amazed that we did not know things that are so plain to them... Many discoveries are reserved for ages still to come, when memory of us will have been effaced."}
+
+\begin{flushright}
+Seneca, Natural Questions 
+\end{flushright}
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+\clearpage % Start a new page
+
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+%\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\input{Chapters/Introduction} 
+%\addcontentsline{toc}{chapter}{}
+\clearpage
+
+\input{Chapters/RelatedWork}
+%\addcontentsline{toc}{chapter}{}
+\clearpage
+
+
+%-----------MULTICORE DB CRACKING--------------
+\input{Chapters/damon/multicore_dbc}
+\input{Chapters/damon/Introduction}
+\input{Chapters/damon/RelatedWork}
+\input{Chapters/damon/OriginalCracking}
+\input{Chapters/damon/EfficientCracking}
+\input{Chapters/damon/Evaluation}
+\input{Chapters/damon/Summary}
+\clearpage
+
+%-----------HOLISTIC INDEXING--------------
+\input{Chapters/holistic/hol}
+\input{Chapters/holistic/Introduction}
+\input{Chapters/holistic/TheProblem}
+\input{Chapters/holistic/Experiments}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\addcontentsline{toc}{chapter}{Bibliography} 
+\label{Bibliography}
+\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\clearpage
+%----------------------------------------------------------------------------------------
+%	Lists
+%----------------------------------------------------------------------------------------
+
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+\clearpage
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+
+\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+{
+\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+
+\clearpage
+\addcontentsline{toc}{chapter}{Summary} 
+\input{Chapters/Summary}
+\clearpage
+\addcontentsline{toc}{chapter}{Samenvatting} 
+\input{Chapters/Samenvatting} 
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+%\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+%\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+%The acknowledgements and the people to thank go here, don't forget to include your project advisor\ldots
+%}
+%\clearpage % Start a new page
+\clearpage
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\input{Chapters/Acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	SIKS
+%----------------------------------------------------------------------------------------
+\clearpage
+\addcontentsline{toc}{chapter}{SIKS Dissertation Series}
+\input{Chapters/Siks}
+
+
+\end{document}  
